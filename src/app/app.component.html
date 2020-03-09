@@ -316,9 +316,14 @@
   <div>
     {{ isHappy ? ":)" : ":(" }}
   </div>
-  <div *ngIf>
+  <div *ngIf="name.length > 2">
     Searching for ... {{ name }}
   </div>
+  <ul>
+    <li *ngFor="let passenger of passengers; let i = index;">
+      {{ i }} : {{ passenger.fullname }}
+    </li>
+  </ul>
 </div>
 
 <div class="content" role="main">

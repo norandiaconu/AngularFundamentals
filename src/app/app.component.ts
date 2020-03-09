@@ -1,10 +1,12 @@
 import { Component } from "@angular/core";
+import { Passenger } from "./passenger";
 
 @Component({
   selector: "app-root",
   styleUrls: ["app.component.css"],
   templateUrl: "./app.component.html"
 })
+
 export class AppComponent {
   title: string;
   numberOne = 1;
@@ -12,6 +14,15 @@ export class AppComponent {
   isHappy = true;
   logo = "assets/img/logo.svg";
   name = "Name";
+  passengers: Passenger[] = [{
+    id: 1,
+    fullname: "Stephen",
+    checkedIn: true
+  }, {
+    id: 2,
+    fullname: "Rose",
+    checkedIn: true
+  }];
   handleClick() {
     this.name = "Name";
   }
